@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    background: white;
+    font-family: "Poppins", sans-serif;
+    color: black;
+}
+
+.computer, 
+.user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    height: 30vh;/* 20vh for phone */
+    /* background: red; */
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.computer-svg,
+.user_png {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    /* background: red; */
+    object-fit: contain;
+}
+
+.computer-svg img, 
+.user_png img {
+    height: 100%;/* 50% for phone height:  and width; */
+    width: 100%;
+    object-fit: contain;
+    aspect-ratio:1/1;
+}
+
+.computer-talk {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 5vw;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+#play-btn {
+    background: #0eaa33;
+    font-size: 2vw;
+    padding: 2vw;
+    font-weight: 450;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s;
+    display: block;
+    margin: auto;
+    margin-top: 5vh;
+    width: 20%;
+    color: white;
+}
+
+#play-btn:hover {
+    transform: scale(95%);
+}
+
+.moves {    
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.box {
+    width: 30%;
+    height: 100%;
+    background: white;
+    box-shadow: 0px 3px 15px #8d8d8d;
+    border: 1px solid #757575;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .2s;    
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    transform: scale(105%);
+}
+
+.user{    
+    display: none;
+}
+
+.moves-svg {
+    height: 60%;
+    width: 60%;
+}
+
+.moves-svg img {
+    height: 100%;
+    width: 100%;
+    aspect-ratio:1/1;
+    object-fit: contain;
+} 
+
+.alert-msg-main{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    background: #e1e1e137;
+    display: none;
+}
+
+.alert-msg{
+    z-index: 5;
+    width: 60vw;
+    height: 60vw;
+    background: white;
+    box-shadow: 0px 3px 15px #737373;
+    border-radius: 10px;
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#close{
+    position: absolute;
+    right: -15%;
+    font-size: 7vw;
+    top: -15%;
+    background: transparent;
+}
+
+#win-lose-svg{
+    width: 50%;
+    height: 50%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#win-lose-svg img {
+    height: 100%;
+    width: 100%;
+    aspect-ratio:1/1;
+    object-fit: contain;
+}
+
+#win-lose-para{
+    color: #0eaa33;    
+    bottom: 3%;
+    font-size: 3vw;
+    font-weight: 500;
+    background: transparent;
+    text-align: center;
+    margin: 2vw;
+}
+
+#play-again{
+    display: block;
+    margin: auto;
+    font-size: 3vw;
+    font-weight: 500;
+    padding: 2vw;
+    border-radius: 6px;
+    background: #0eaa33;
+    color: white;
+    cursor: pointer;
+    transition: .2s;
+    border: none;        
+}
+
+#play-again:hover{
+    transform: scale(105%);
+}
+
+
+@media screen and (max-width:760px){
+    .computer, 
+    .user {
+        height: 20vh;      
+        margin-top: 10vh;  
+        margin-bottom: 10vh;
+    }
+    
+    .computer-talk{
+        font-size: 7vw;
+        line-height: 5vh;
+        letter-spacing: 1px;
+        font-weight: 550;
+    }
+    
+    #play-btn{
+        font-size: 4vw;
+        width: 40%;
+    }
+    
+    .box{
+        width: 32%;
+    }    
+    
+    .user_png{
+        width: 20%;
+    }
+    
+    .moves{
+        width: 80%;
+    }
+    
+    .user{
+        width: 92vw;        
+    }
+}
+
+
+@media screen and (max-width:550px){
+    .user{
+        height: 18vh;
+    }
+}
+
