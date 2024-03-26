@@ -70,6 +70,9 @@ function startGame() {
 // Function to handle winning scenario
 function win() {
     alertArea.style.display = 'flex'; // Show the alert message
+    winLosePara.textContent = 'You Won!'; // Display the message
+    winLosePara.style.color = '#0eaa33'; // Set color to green
+    winLoseSvg.innerHTML = '<img src="win-icon.jpg">'
 }
 
 // Function to handle losing scenario
